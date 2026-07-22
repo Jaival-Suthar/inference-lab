@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022"],
+    "lib": ["ES2022", "DOM"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "strict": true,
@@ -13,9 +13,10 @@
     "moduleDetection": "force",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true
   },
-  "include": ["types/**/*.d.ts"],
-  "exclude": ["node_modules", "dist", "coverage"]
+  "include": ["apps/**/*.ts", "packages/**/*.ts", "types/**/*.d.ts"],
+  "exclude": ["node_modules", "dist", "coverage", ".husky/_"]
 }
