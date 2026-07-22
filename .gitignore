@@ -14,6 +14,7 @@ coverage/
 .prettier-cache/
 .parcel-cache/
 .vite/
+.husky/_
 
 # Environment
 .env
@@ -25,4 +26,3 @@ coverage/
 Thumbs.db
 .idea/
 .vscode/
-
