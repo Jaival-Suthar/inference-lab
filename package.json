@@ -1,18 +1,45 @@
 {
   "name": "inference-lab",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Local LLM inference experiments and benchmarking for Ollama and future runtimes.",
   "type": "module",
   "packageManager": "pnpm@11.9.0",
   "engines": {
     "node": ">=22"
   },
+  "keywords": [
+    "ollama",
+    "llm",
+    "inference",
+    "benchmarking",
+    "typescript",
+    "nodejs",
+    "sqlite",
+    "drizzle",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jaival-Suthar/inference-lab.git"
+  },
+  "homepage": "https://github.com/Jaival-Suthar/inference-lab",
+  "bugs": {
+    "url": "https://github.com/Jaival-Suthar/inference-lab/issues"
+  },
+  "author": "Jaival Suthar",
+  "license": "MIT",
   "scripts": {
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "dev": "node --experimental-strip-types apps/cli/src/index.ts",
+    "benchmark": "node --experimental-strip-types apps/cli/src/index.ts benchmark",
+    "compare": "node --experimental-strip-types apps/cli/src/index.ts compare",
+    "report": "node --experimental-strip-types apps/cli/src/index.ts report",
+    "export": "node --experimental-strip-types apps/cli/src/index.ts export",
+    "stats": "node --experimental-strip-types apps/cli/src/index.ts stats",
     "typecheck": "tsc --noEmit",
     "check": "pnpm format:check && pnpm lint && pnpm typecheck",
     "prepare": "husky"
@@ -26,6 +53,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
+    "@types/node": "^22.20.1",
     "debug": "4.4.3",
     "eslint": "^9.31.0",
     "husky": "^9.1.7",

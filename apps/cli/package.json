@@ -2,7 +2,14 @@
   "name": "@inference-lab/cli",
   "private": true,
   "version": "0.0.0",
+  "description": "Command-line interface for running local Ollama inference and benchmarks.",
   "type": "module",
+  "dependencies": {
+    "@inference-lab/benchmark": "workspace:*",
+    "@inference-lab/inference-client": "workspace:*",
+    "@inference-lab/metrics": "workspace:*",
+    "@inference-lab/storage": "workspace:*"
+  },
   "scripts": {
     "dev": "node --experimental-strip-types src/index.ts"
   }

@@ -3,7 +3,23 @@ export const DEFAULT_OLLAMA_MODEL = 'qwen3:8b';
 
 export interface GenerateRequest {
   model?: string;
+  maxTokens?: number;
   prompt: string;
+}
+
+export interface GenerateStreamChunk {
+  context?: number[];
+  createdAt?: string;
+  done: boolean;
+  doneReason?: string;
+  evalCount?: number;
+  evalDuration?: number;
+  loadDuration?: number;
+  model: string;
+  promptEvalCount?: number;
+  promptEvalDuration?: number;
+  response: string;
+  totalDuration?: number;
 }
 
 export interface GenerateResponse {
@@ -23,8 +39,12 @@ export interface GenerateResponse {
 
 export interface OllamaGenerateRequest {
   model: string;
+  options?: {
+    num_predict?: number;
+  };
+  think?: boolean;
   prompt: string;
-  stream: false;
+  stream: boolean;
 }
 
 export interface OllamaGenerateResponse {

@@ -1,0 +1,13 @@
+{
+  "name": "@inference-lab/benchmark",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Benchmark orchestration for normal and streaming inference runs.",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@inference-lab/inference-client": "workspace:*",
+    "@inference-lab/metrics": "workspace:*",
+    "@inference-lab/storage": "workspace:*"
+  }
+}

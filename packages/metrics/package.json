@@ -1,0 +1,8 @@
+{
+  "name": "@inference-lab/metrics",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Shared benchmark metric types and formatting helpers.",
+  "type": "module",
+  "exports": "./src/index.ts"
+}

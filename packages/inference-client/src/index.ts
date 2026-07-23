@@ -11,6 +11,7 @@ export {
   DEFAULT_OLLAMA_MODEL,
   type GenerateRequest,
   type GenerateResponse,
+  type GenerateStreamChunk,
   type OllamaErrorResponse,
   type OllamaGenerateRequest,
   type OllamaGenerateResponse,

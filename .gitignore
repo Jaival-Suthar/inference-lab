@@ -5,6 +5,9 @@ node_modules/
 # Build output
 dist/
 coverage/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
 
 # TypeScript
 *.tsbuildinfo

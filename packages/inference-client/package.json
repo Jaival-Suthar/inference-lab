@@ -2,5 +2,7 @@
   "name": "@inference-lab/inference-client",
   "private": true,
   "version": "0.0.0",
-  "type": "module"
+  "description": "Shared inference client abstraction and Ollama transport for inference-lab.",
+  "type": "module",
+  "exports": "./src/index.ts"
 }

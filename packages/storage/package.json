@@ -1,0 +1,12 @@
+{
+  "name": "@inference-lab/storage",
+  "private": true,
+  "version": "0.0.0",
+  "description": "SQLite persistence layer for benchmark runs and summaries.",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@inference-lab/metrics": "workspace:*",
+    "drizzle-orm": "^0.44.5"
+  }
+}

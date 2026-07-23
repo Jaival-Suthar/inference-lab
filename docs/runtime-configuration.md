@@ -1,5 +1,25 @@
 # Runtime Configuration
 
-`OLLAMA_BASE_URL` is kept in `.env.example` so contributors have a single, documented place to discover the default local Ollama endpoint.
+`inference-lab` keeps runtime configuration in environment variables so the CLI stays easy to run locally and easy to
+configure in automation.
 
-Keeping the value in an example file makes the expected runtime setting explicit without requiring anyone to commit personal environment files.
+## `OLLAMA_BASE_URL`
+
+Default: `http://localhost:11434`
+
+Use this variable when Ollama is not running on the default host or when you are pointing the CLI at a remote test
+instance.
+
+Example:
+
+```bash
+OLLAMA_BASE_URL=http://192.168.1.50:11434 pnpm dev --prompt "Explain KV Cache"
+```
+
+## Why This Exists
+
+- It makes the default connection target explicit in the repository.
+- It keeps local development and automation aligned.
+- It documents the one runtime setting that matters before the rest of the configuration surface grows.
+
+The committed [.env.example](../.env.example) file mirrors the default value so new contributors can discover it quickly.
